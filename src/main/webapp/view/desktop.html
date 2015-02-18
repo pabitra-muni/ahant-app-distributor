@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ahant-Mobile</title>
+<!-- CSS designs  -->
+
+<link rel="stylesheet" type="text/css" href="../libs/css/desktop.css">
+<!-- JS libraries -->
+<script type="text/javascript" src="../libs/js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="../libs/js/desktop-util.js"></script>
+<script type="text/javascript" src="../controller/desktop.js"></script>
+
+</head>
+<body>
+	<div id="header">
+		<label>Application Distribution Portal</label>
+	</div>
+	<div id="content">
+		<div id="app-select-div" class="left-panel">
+			<label class="panel-heading">Select Application</label>
+			<div class="panel-content">
+				<div id="nav">
+					<ul class="menu">
+						<li><a> Android </a>
+							<ul class="sub-menu">
+								<li><a> App1 </a>
+									<ul class="inner-menu">
+										<li><a>Version1.0</a></li>
+										<li><a>Version 1.1</a></li>
+										<li><a>Version 1.2</a></li>
+									</ul></li>
+								<li><a> App2</a>
+									<ul class="inner-menu">
+										<li><a>Release 1</a></li>
+										<li><a>Release1</a></li>
+										<li><a>Release1</a></li>
+									</ul></li>
+							</ul></li>
+						<li><a> iPhone </a>
+							<ul class="sub-menu">
+								<li><a>App1</a>
+									<ul class="inner-menu">
+										<li><a>Release1</a></li>
+										<li><a>Release1</a></li>
+										<li><a>Release1</a></li>
+									</ul></li>
+								<li><a>App2</a>
+									<ul class="inner-menu">
+										<li><a>Release1</a></li>
+										<li><a>Release1</a></li>
+										<li><a>Release1</a></li>
+									</ul></li>
+							</ul></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+		<div id="app-details-div" class="right-panel">
+			<label class="panel-heading">Application Details</label>
+			<div class="panel-content">
+				<div class="info">
+					<label>Select an apllication from left panel...</label>
+				</div>
+				<div id="app-details">
+					<div id="app-info">
+						<div style="float: left;">
+							<p>
+								<span class="app-info-label">Application Name: </span><span
+									class="app-info-val">Android App</span>
+							</p>
+							<p>
+								<span class="app-info-label">Version: </span><span
+									class="app-info-val">1.0</span>
+							</p>
+							<p>
+								<span class="app-info-label">Release Date: </span><span
+									class="app-info-val">05/04/2014</span>
+							</p>
+							<p>
+								<span class="app-info-label">Release Note: </span><span
+									class="app-info-val">Application release notes.</span>
+							</p>
+						</div>
+						<img alt="app icon" src="../libs/image/app.png">
+					</div>
+					<div id="build-info">
+						<div id="notification">
+							<img class="notify-icon" alt="select"
+								src="../libs/image/check-box.png"> <img
+								id="notify-select-icon" class="notify-icon" alt="select"
+								src="../libs/image/select.png"> <label>Notify me
+								for future releases of this application.</label>
+						</div>
+						<div id="build-list">
+							<a href="#" class="build-item">env1-build</a> <a href="#"
+								class="build-item">env2-build</a> <a href="#" class="build-item">env3-build</a>
+							<a href="#" class="build-item">env4-build</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<label> &copy; <script type="text/javascript">
+			document.write(new Date().getFullYear());
+		</script>&nbsp; Ahant Mobile. All rights reserved.
+		</label>
+	</div>
+</body>
+</html>

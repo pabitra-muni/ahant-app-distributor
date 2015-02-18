@@ -1,0 +1,8 @@
+CREATE DATABASE #db_name;#b
+CREATE TABLE #db_name.environment(id int(11) NOT NULL AUTO_INCREMENT,env_code varchar(45) NOT NULL,env_name varchar(45) NOT NULL,description varchar(100) DEFAULT NULL,PRIMARY KEY (env_code),UNIQUE KEY id_UNIQUE (id)) COMMENT='This table stores different environment details';
+#b
+CREATE TABLE #db_name.application(id int(11) NOT NULL AUTO_INCREMENT,app_code varchar(45) NOT NULL,app_name varchar(45) NOT NULL,platform varchar(45) NOT NULL,description varchar(45) NOT NULL,app_icon blob NOT NULL,PRIMARY KEY (app_code),UNIQUE KEY appName_UNIQUE (app_name),UNIQUE KEY id_UNIQUE (id)) COMMENT='This table stores application details';
+#b
+CREATE TABLE #db_name.platform(id int(11) NOT NULL AUTO_INCREMENT,platform_name varchar(45) NOT NULL,executable_type varchar(3) NOT NULL,PRIMARY KEY (id),UNIQUE KEY id_UNIQUE (id),UNIQUE KEY platform_name_UNIQUE (platform_name));
+#b 
+CREATE TABLE #db_name.release(app_code varchar(45) NOT NULL,release_number varchar(45) NOT NULL,env_code varchar(45) NOT NULL,executable_path varchar(500) NOT NULL,provisioin_profile_path varchar(500) DEFAULT 'null',executable_size varchar(45) NOT NULL COMMENT 'in KB',release_date datetime NOT NULL,release_note varchar(300) NOT NULL,PRIMARY KEY (app_code,release_number,env_code),KEY app_release_idx (app_code),KEY env_release_idx (env_code),CONSTRAINT fk_app_release FOREIGN KEY (app_code) REFERENCES application (app_code) ON DELETE NO ACTION ON UPDATE NO ACTION,CONSTRAINT fk_env_release FOREIGN KEY (env_code) REFERENCES environment (env_code) ON DELETE NO ACTION ON UPDATE NO ACTION) COMMENT='This table saves release entries.';

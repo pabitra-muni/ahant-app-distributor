@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ahant-Mobile</title>
+<!-- CSS designs  -->
+
+<link rel="stylesheet" type="text/css" href="../libs/css/admin.css">
+
+<!-- JS libraries -->
+<script type="text/javascript" src="../libs/js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="../libs/js/desktop-util.js"></script>
+<script type="text/javascript" src="../controller/admin.js"></script>
+
+</head>
+<body>
+	<div id="header">
+		<label>Application Distribution Portal - Admin</label>
+	</div>
+	<div id="content">
+		<div id="app-select-div" class="left-panel">
+			<label class="panel-heading">Select Option</label>
+			<div class="panel-content">
+				<div id="nav">
+					<ul class="menu">
+						<li><a> Upload </a>
+							<ul class="sub-menu">
+								<li><a href="#" for="upload" class="menu-item"
+									title="Upload - Android">Andoid</a></li>
+								<li><a href="#" for="upload" class="menu-item"
+									title="Upload - iPhone">iPhone</a></li>
+								<li><a href="#" for="upload" class="menu-item"
+									title="Upload - iPad">iPad</a></li>
+							</ul></li>
+						<li><a> Settings </a>
+							<ul class="sub-menu">
+								<li><a href="#" for="app-setting" class="menu-item"
+									title="Settings - Application">Application </a></li>
+								<li><a href="#" for="platform-setting" class="menu-item"
+									title="Settings - Platform">Platform</a></li>
+								<li><a href="#" for="env-setting" class="menu-item"
+									title="Settings - Environment">Environment</a></li>
+								<li><a href="#" for="admin-setting" class="menu-item"
+									title="Settings - Admin">Admin Properties</a></li>
+							</ul></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="right-panel">
+			<label class="panel-heading">Details</label>
+			<div class="panel-content">
+				<div id="upload">
+					<div id="app-detail">
+						<div id="app-label">
+							<div>
+								<label>Platform:</label>
+							</div>
+							<div>
+								<label>Application:</label>
+							</div>
+							<div>
+								<label>Version:</label>
+							</div>
+							<div>
+								<label>DEV:</label>
+							</div>
+							<div>
+								<label>QA:</label>
+							</div>
+						</div>
+						<div id="app-value">
+							<div>
+								<label>Android</label>
+							</div>
+							<div>
+								<select id="app-option">
+									<option>Talking Tom</option>
+									<option>Football</option>
+									<option>Car Racing</option>
+								</select>
+							</div>
+							<div>
+								<input type="text" id="version" maxlength="5" />
+							</div>
+							<div>
+								<input type="file" id="dev-file" />
+							</div>
+							<div>
+								<input type="file" id="qa-file" />
+							</div>
+
+						</div>
+					</div>
+					<div id="notification">
+						<div id="notify-select">
+							<img class="notify-icon" alt="select"
+								src="../libs/image/check-box.png"> <img
+								id="notify-select-icon" class="notify-icon" alt="select"
+								src="../libs/image/select.png"> <label>Send
+								notification to users.</label>
+						</div>
+						<div id="notify-msg">
+							<label>Message:</label>
+							<textarea id="message"></textarea>
+						</div>
+					</div>
+					<div id="submit">
+						<a href="#" class="submit-btn">Upload</a>
+					</div>
+				</div>
+				<div id="app-setting">
+					<div id="app-setting-menu">
+						<label class="app-menu-item selected-app-menu-item" id="add">Add</label>
+						<label class="app-menu-item" id="delete">Delete</label>
+					</div>
+					<div id="app-detail" class="app-add">
+						<div id="app-label">
+							<div>
+								<label>Application Name:</label>
+							</div>
+							<div>
+								<label>Platform:</label>
+							</div>
+							<div>
+								<label>Icon:</label>
+							</div>
+							<div>
+								<label>Description:</label>
+							</div>
+						</div>
+						<div id="app-value">
+							<div>
+								<input type="text" id="app-name" />
+							</div>
+							<div>
+								<select id="platform-option">
+									<option>Android</option>
+									<option>iPhone</option>
+									<option>iPad</option>
+								</select>
+							</div>
+							<div>
+								<input type="file" id="app-icon" />
+							</div>
+							<div>
+								<input type="text" id="app-desc" />
+							</div>
+
+						</div>
+						<div id="submit">
+							<a href="#" class="submit-btn">Add</a>
+						</div>
+					</div>
+					<div id="app-detail" class="app-delete">
+						<div id="app-label">
+							<div>
+								<label>Application Name:</label>
+							</div>
+							<div>
+								<label>Platform:</label>
+							</div>
+						</div>
+						<div id="app-value">
+							<div>
+								<select id="app-setting-option">
+									<option>Talking Tom</option>
+									<option>Football</option>
+									<option>Car Racing</option>
+								</select>
+							</div>
+							<div>
+								<select id="platform-option">
+									<option>Android</option>
+									<option>iPhone</option>
+									<option>iPad</option>
+								</select>
+							</div>
+						</div>
+						<div id="submit">
+							<a href="#" class="submit-btn">Delete</a>
+						</div>
+					</div>
+				</div>
+				<div id="env-setting">
+					<div id="app-detail">
+						<div id="app-label">
+							<div>
+								<label>Environment Name:</label>
+							</div>
+							<div>
+								<label>Desc:</label>
+							</div>
+						</div>
+						<div id="app-value">
+							<div>
+								<input type="text" id="env-name" />
+							</div>
+							<div>
+								<input type="text" id="env-desc" />
+							</div>
+
+						</div>
+					</div>
+					<div id="submit">
+						<a href="#" class="submit-btn">Add</a>
+					</div>
+				</div>
+				<div id="platform-setting">
+					<div id="app-detail">
+						<div id="app-label">
+							<div>
+								<label>Platform Name:</label>
+							</div>
+							<div>
+								<label>Desc:</label>
+							</div>
+						</div>
+						<div id="app-value">
+							<div>
+								<input type="text" id="platform-name" />
+							</div>
+							<div>
+								<input type="text" id="platform-desc" />
+							</div>
+
+						</div>
+					</div>
+					<div id="submit">
+						<a href="#" class="submit-btn">Add</a>
+					</div>
+				</div>
+				<div id="admin-setting">For future use...</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<label> &copy; <script type="text/javascript">
+			document.write(new Date().getFullYear());
+		</script>&nbsp; Ahant Mobile. All rights reserved.
+		</label>
+	</div>
+</body>
+</html>

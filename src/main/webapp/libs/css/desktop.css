@@ -1,0 +1,79 @@
+@CHARSET "ISO-8859-1";
+@import 'page-template.css';
+@import 'menu.css';
+
+.info {
+	padding: 20px;
+	font-size: 0.9em;
+	font-weight: bold;
+	color: #0E4763;
+	display: none;
+}
+
+#app-info {
+	padding: 10px 2%;
+	border-bottom: 2px solid #529CB3;
+	float: left;
+	width: 95%;
+	/* box-shadow: inset 0px -1px 0px 0px #529CB3; */
+}
+
+#app-info img {
+	float: right;
+	height: 150px;
+	width: 150px;
+	margin-top: 5px;
+}
+
+#build-info {
+	float: left;
+	width: 95%;
+	padding: 10px 2%;
+	/* border: 1px solid red; */
+}
+
+.app-info-label,.app-info-val {
+	font-size: 0.8em;
+	font-weight: bold;
+	color:
+}
+
+.app-info-val {
+	font-weight: normal;
+}
+
+#notification {
+	float: left;
+	width: 100%;
+	cursor: pointer;
+}
+
+.notify-icon {
+	float: left;
+	height: 16px;
+	width: 16px;
+}
+
+#notify-select-icon {
+	margin-left: -16px;
+}
+
+#notification label {
+	margin-left: 5px;
+	float: left;
+	font-size: 0.75em;
+	cursor: pointer;
+}
+
+#build-list{
+	float: left;
+	width: 100%;
+	padding-top: 30px;
+}
+
+ .build-item{
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+	font-size: 0.9em;
+}
